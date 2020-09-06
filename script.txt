@@ -1,0 +1,4 @@
+tns build android  --bundle --env.uglify --env.aot --release --key-store-path C:\Users\franc\Documents\keystore\playkey.jks  --key-store-password franlo1904 --key-store-alias donav1 --key-store-alias-password franlo1904  --env.local
+
+
+tns platform remove android 
