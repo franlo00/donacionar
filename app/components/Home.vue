@@ -24,11 +24,21 @@
                         </StackLayout>  
                     </StackLayout>
                 </v-template>
+                   <StackLayout class="content" height="205" >
+                       <StackLayout class="list-group-item" marginBottom="20" horizontalAlignment="center">
+                           <Button @tap="shownosotros()" >¿No existe tu institución? Contactanos</Button>
+                        </StackLayout>  
+                    </StackLayout>
             </ListView>
-            <StackLayout col="0" class="content norecords " row="3" :visibility="hayteam ? 'collapsed' : 'visible'" ref="norecords">
+            <StackLayout col="0" class="content norecords " row="*" :visibility="hayteam ? 'collapsed' : 'visible'" ref="norecords">
                 <GridLayout orientation="horizontal" class="list-group-item" marginLeft="15" marginRight="15" marginBottom="20" paddingRight="20" horizontalAlignment="center"  >
                     <Label text="No se encontraron organizaciones para su busqueda." class="nameclass" textWrap="true" />
                 </GridLayout>
+                <StackLayout class="content" height="205" >
+                   <StackLayout class="list-group-item" marginBottom="20" horizontalAlignment="center">
+                           <Button @tap="shownosotros()" >¿No existe tu institución? Contactanos</Button>
+                        </StackLayout>  
+                    </StackLayout>
             </StackLayout> 
             <!--<StackLayout col="0" class="content " row="4" ref="nuevainstitucion">
                 <Button @tap="shownosotros()" >¿No existe tu institución? Contactanos</Button>

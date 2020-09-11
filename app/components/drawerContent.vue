@@ -32,20 +32,24 @@ export default {
   },
   created(){
     for (var ii = 0, len = this.$store.state.orgs.length; ii < len; ii++) {
-      var elm = this.$store.state.orgs[ii]
-      if(elm.categoria != ''){
-          var ncat = 0;
-          
-            for (var j = 0, lenj = this.pages.length; j < lenj; j++) {
-              if (typeof this.pages[j] !== 'undefined') {
-                if(elm.categoria == this.pages[j].name){
-                    ncat = 1;
+      var elm = this.$store.state.orgs[ii];
+      var categorias = elm.categoria.split(";");
+      for (ite = 0; i < categorias.length; it++) {
+        var ncategoria = categorias[ite];
+        if(ncategoria != ''){
+            var ncat = 0;
+            
+              for (var j = 0, lenj = this.pages.length; j < lenj; j++) {
+                if (typeof this.pages[j] !== 'undefined') {
+                  if(ncategoria == this.pages[j].name){
+                      ncat = 1;
+                  }
                 }
-              }
-          }/**/
-          if(ncat == 0){
-            this.pages = this.pages.concat([{ name: elm.categoria, component: this.$routes.Home, adds: elm.categoria }]);
-          }
+            }/**/
+            if(ncat == 0){
+              this.pages = this.pages.concat([{ name: ncategoria, component: this.$routes.Home, adds: ncategoria }]);
+            }
+        }
       }
     }
     this.pages = this.pages.concat([{ name: 'Información', component: this.$routes.Informacion, adds: '' }]);

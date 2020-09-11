@@ -4,9 +4,18 @@
   "description": "donacionar",
   "author": "donacionar <contacto@donacion.com.ar>",
   "license": "MIT",
-  "main": "main",
+  "main": "main.js",
+  "nativescript": {
+    "id": "org.nativescript.donav1",
+    "templateVersion": "v2",
+    "tns-ios": {
+      "version": "6.5.0"
+    },
+    "tns-android": {
+      "version": "6.5.3"
+    }
+  },
   "dependencies": {
-    "@nativescript/core": "7.0.0",
     "@nota/nativescript-webview-ext": "^6.5.4",
     "@vue/devtools": "^5.3.3",
     "nativescript-appavailability": "^1.3.2",
@@ -15,14 +24,14 @@
     "nativescript-ui-sidedrawer": "^8.0.1",
     "nativescript-vue": "^2.7.1",
     "nativescript-vue-devtools": "^1.4.0",
+    "tns-core-modules": "^6.5.16",
     "vuex": "^3.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
-    "@nativescript/android": "7.0.0",
-    "@nativescript/webpack": "3.0.0",
     "babel-loader": "^8.1.0",
+    "nativescript-dev-webpack": "^1.5.1",
     "nativescript-vue-template-compiler": "^2.7.1",
     "nativescript-worker-loader": "~0.11.0",
     "node-sass": "^4.13.1",

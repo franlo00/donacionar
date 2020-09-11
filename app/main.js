@@ -23,12 +23,13 @@ new Vue({
   async beforeCreate() {
     this.$store.commit('initialiseStore');
     let timestampInSeconds = Math.floor(Date.now()/1000);
-    if((timestampInSeconds - this.$store.lastupdate) > 3600){
+    
       let jresult = await http.getJSON("https://donacion.com.ar/todas?json=1");
-      this.$store.commit('setOrgs',jresult.results);
+      if(jresult.version != this.$store.lastupdate){
+        this.$store.commit('setOrgs',jresult.results);
       
-      this.$store.commit('setLU',timestampInSeconds);
-    }
+        this.$store.commit('setLU',jresult.version);
+      }
 
 
 	},

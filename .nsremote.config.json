@@ -1,5 +1,5 @@
 {
     "circleci": {
-        "httpsRepositoryURL": "{{https://github.com/franlo00/donacionar.git}}"
+        "httpsRepositoryURL": "https://github.com/franlo00/donacionar.git"
     }
 }
